@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: bu-a-workloads
+data:
+  BU_NAME: "Business Unit A"
+  ENVIRONMENT: "homologacao"
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head><title>BU-A | Homologação</title></head>
+    <body style="font-family:sans-serif; background:#1a1a2e; color:#e0e0e0; display:flex; justify-content:center; align-items:center; height:100vh; margin:0;">
+      <div style="text-align:center; padding:40px; border:2px solid #0f3460; border-radius:12px; background:#16213e;">
+        <h1 style="color:#e94560;">🏢 Business Unit A</h1>
+        <p style="font-size:1.2em;">Ambiente: <strong>Homologação</strong></p>
+        <p>Cluster: <strong>bu-a-ho</strong></p>
+        <p style="color:#0f3460;">Gerenciado via GitOps + OCM Placement</p>
+      </div>
+    </body>
+    </html>
