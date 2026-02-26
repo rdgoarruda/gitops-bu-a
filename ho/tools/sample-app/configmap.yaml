@@ -1,11 +1,10 @@
+# app-html: conteúdo HTML montado como arquivo em /usr/share/nginx/html
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: app-config
+  name: app-html
   namespace: bu-a-workloads
 data:
-  BU_NAME: "Business Unit A"
-  ENVIRONMENT: "homologacao"
   index.html: |
     <!DOCTYPE html>
     <html>
@@ -21,4 +20,13 @@ data:
         <p style="color:#0f3460;">Gerenciado via GitOps + OCM Placement</p>
       </div>
     </body>
-    </html>
+    </html>---
+# app-config: variáveis de ambiente injetadas via envFrom
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: bu-a-workloads
+data:
+  BU_NAME: "Business Unit A"
+  ENVIRONMENT: "homologacao"
