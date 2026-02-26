@@ -1,0 +1,14 @@
+# -------------------------------------------------------
+# CODEOWNERS — gitops-bu-a
+# Apenas @rdgoarruda pode aprovar PRs para a branch main.
+# Requer branch protection rule com "Require CODEOWNERS review".
+# -------------------------------------------------------
+
+# Catch-all: todo arquivo exige aprovação do owner
+*                            @rdgoarruda
+
+# Homologação
+ho/**                        @rdgoarruda
+
+# Produção — controle restrito
+pr/**                        @rdgoarruda
