@@ -20,7 +20,8 @@ data:
         <p style="color:#0f3460;">Gerenciado via GitOps + OCM Placement</p>
       </div>
     </body>
-    </html>---
+    </html>
+---
 # app-config: variáveis de ambiente injetadas via envFrom
 apiVersion: v1
 kind: ConfigMap
